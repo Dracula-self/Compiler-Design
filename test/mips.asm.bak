@@ -1,0 +1,119 @@
+.data
+
+.text
+.globl main
+j main
+
+main:
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+	# 输出 NULL 的值
+	li $v0, 1
+	lw $a0, NULL
+	syscall
+	li $v0, 11
+	li $a0, 10
+	syscall
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+	# 输出 NULL 的值
+	li $v0, 1
+	lw $a0, NULL
+	syscall
+	li $v0, 11
+	li $a0, 10
+	syscall
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+	# 输出 NULL 的值
+	li $v0, 1
+	lw $a0, NULL
+	syscall
+	li $v0, 11
+	li $a0, 10
+	syscall
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+labelNULL:
+	# NULL = (NULL < NULL)
+	lw $t0, NULL
+	lw $t1, NULL
+	slt $t2, $t0, $t1
+	sw $t2, NULL
+	# 如果 NULL == 0 则跳转到 labelNULL
+	lw $t0, NULL
+	beqz $t0, labelNULL
+	# NULL = NULL + NULL
+	lw $t0, NULL
+	lw $t1, NULL
+	add $t1, $t0, $t1
+	sw $t1, NULL
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+	# NULL = NULL + NULL
+	lw $t0, NULL
+	lw $t1, NULL
+	add $t1, $t0, $t1
+	sw $t1, NULL
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+	# 输出 NULL 的值
+	li $v0, 1
+	lw $a0, NULL
+	syscall
+	li $v0, 11
+	li $a0, 10
+	syscall
+	# 无条件跳转到 labelNULL
+	j labelNULL
+labelNULL:
+	# NULL = (NULL < NULL)
+	lw $t0, NULL
+	lw $t1, NULL
+	slt $t2, $t0, $t1
+	sw $t2, NULL
+	# 如果 NULL == 0 则跳转到 labelNULL
+	lw $t0, NULL
+	beqz $t0, labelNULL
+	# NULL = NULL * NULL
+	lw $t0, NULL
+	lw $t1, NULL
+	mul $t2, $t0, $t1
+	sw $t2, NULL
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+	# 无条件跳转到 labelNULL
+	j labelNULL
+labelNULL:
+	# NULL = NULL * NULL
+	lw $t0, NULL
+	lw $t1, NULL
+	mul $t2, $t0, $t1
+	sw $t2, NULL
+	# NULL = NULL
+	lw $t0, NULL
+	sw $t0, NULL
+labelNULL:
+	# 输出 NULL 的值
+	li $v0, 1
+	lw $a0, NULL
+	syscall
+	li $v0, 11
+	li $a0, 10
+	syscall
+	# 程序结束
+	li $v0, 10
+	syscall

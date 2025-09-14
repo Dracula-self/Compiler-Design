@@ -1,0 +1,37 @@
+[Line: 0] ProK
+  [Line: 1] PheadK  p
+  [Line: 2] TypeK
+    [Line: 2] DecK  IntegerK  t1  param: 
+  [Line: 3] VarK
+    [Line: 3] DecK  IntegerK  v1  v2  param: 
+    [Line: 4] DecK  ArrayK  1  20  IntegerK  a  param: 
+  [Line: 5] ProcDecK
+    [Line: 5] ProcDecK  q
+      [Line: 6] DecK  IntegerK  i  param: val
+      [Line: 8] TypeK
+      [Line: 8] VarK
+      [Line: 8] ProcDecK
+      [Line: 8] StmLK
+        [Line: 9] StmtK  Assign
+          [Line: 9] ExpK  a  IdV
+          [Line: 9] ExpK  i  IdV
+        [Line: 10] StmtK  Write
+          [Line: 10] ExpK  a  IdV
+  [Line: 12] StmLK
+    [Line: 13] StmtK  Read  v1
+    [Line: 14] StmtK  If
+      [Line: 14] ExpK  Op  <
+        [Line: 14] ExpK  v1  IdV
+        [Line: 14] ExpK  Const  10
+      [Line: 15] StmtK  Assign
+        [Line: 15] ExpK  v1  IdV
+        [Line: 15] ExpK  Op  +
+          [Line: 15] ExpK  v1  IdV
+          [Line: 15] ExpK  Const  10
+      [Line: 16] StmtK  Assign
+        [Line: 16] ExpK  v1  IdV
+        [Line: 16] ExpK  Op  -
+          [Line: 16] ExpK  v1  IdV
+          [Line: 16] ExpK  Const  10
+    [Line: 18] StmtK  Call    q
+      [Line: 18] ExpK  v1  IdV

@@ -1,0 +1,117 @@
+[Line: 0] ProK
+  [Line: 1] PheadK  p
+  [Line: 2] TypeK
+  [Line: 2] VarK
+    [Line: 2] DecK  IntegerK  i  j  num  param: 
+    [Line: 3] DecK  ArrayK  1  20  IntegerK  a  param: 
+  [Line: 5] ProcDecK
+    [Line: 5] ProcDecK  q
+      [Line: 5] DecK  IntegerK  num  param: val
+      [Line: 6] TypeK
+      [Line: 6] VarK
+        [Line: 6] DecK  IntegerK  i  j  k  param: 
+        [Line: 7] DecK  IntegerK  t  param: 
+      [Line: 8] ProcDecK
+      [Line: 8] StmLK
+        [Line: 9] StmtK  Assign
+          [Line: 9] ExpK  i  IdV
+          [Line: 9] ExpK  Const  1
+        [Line: 10] StmtK  Assign
+          [Line: 10] ExpK  j  IdV
+          [Line: 10] ExpK  Const  1
+        [Line: 11] StmtK  While
+          [Line: 11] ExpK  Op  <
+            [Line: 11] ExpK  i  IdV
+            [Line: 11] ExpK  num  IdV
+          [Line: 12] StmtK  Assign
+            [Line: 12] ExpK  j  IdV
+            [Line: 12] ExpK  Op  +
+              [Line: 12] ExpK  Op  -
+                [Line: 12] ExpK  num  IdV
+                [Line: 12] ExpK  i  IdV
+              [Line: 12] ExpK  Const  1
+          [Line: 13] StmtK  Assign
+            [Line: 13] ExpK  k  IdV
+            [Line: 13] ExpK  Const  1
+          [Line: 14] StmtK  While
+            [Line: 14] ExpK  Op  <
+              [Line: 14] ExpK  k  IdV
+              [Line: 14] ExpK  j  IdV
+            [Line: 15] StmtK  If
+              [Line: 15] ExpK  Op  <
+                [Line: 15] ExpK  a  ArrayMembV
+                  [Line: 15] ExpK  Op  +
+                    [Line: 15] ExpK  k  IdV
+                    [Line: 15] ExpK  Const  1
+                [Line: 15] ExpK  a  ArrayMembV
+                  [Line: 15] ExpK  k  IdV
+              [Line: 16] StmtK  Assign
+                [Line: 16] ExpK  t  IdV
+                [Line: 16] ExpK  a  ArrayMembV
+                  [Line: 16] ExpK  k  IdV
+              [Line: 17] StmtK  Assign
+                [Line: 17] ExpK  a  ArrayMembV
+                  [Line: 17] ExpK  k  IdV
+                [Line: 17] ExpK  a  ArrayMembV
+                  [Line: 17] ExpK  Op  +
+                    [Line: 17] ExpK  k  IdV
+                    [Line: 17] ExpK  Const  1
+              [Line: 18] StmtK  Assign
+                [Line: 18] ExpK  a  ArrayMembV
+                  [Line: 18] ExpK  Op  +
+                    [Line: 18] ExpK  k  IdV
+                    [Line: 18] ExpK  Const  1
+                [Line: 18] ExpK  t  IdV
+              [Line: 19] StmtK  Assign
+                [Line: 19] ExpK  t  IdV
+                [Line: 19] ExpK  Const  0
+            [Line: 21] StmtK  Assign
+              [Line: 21] ExpK  k  IdV
+              [Line: 21] ExpK  Op  +
+                [Line: 21] ExpK  k  IdV
+                [Line: 21] ExpK  Const  1
+          [Line: 23] StmtK  Assign
+            [Line: 23] ExpK  i  IdV
+            [Line: 23] ExpK  Op  +
+              [Line: 23] ExpK  i  IdV
+              [Line: 23] ExpK  Const  1
+  [Line: 27] StmLK
+    [Line: 28] StmtK  Read  num
+    [Line: 29] StmtK  Assign
+      [Line: 29] ExpK  i  IdV
+      [Line: 29] ExpK  Const  1
+    [Line: 30] StmtK  While
+      [Line: 30] ExpK  Op  <
+        [Line: 30] ExpK  i  IdV
+        [Line: 30] ExpK  Op  +
+          [Line: 30] ExpK  num  IdV
+          [Line: 30] ExpK  Const  1
+      [Line: 31] StmtK  Read  j
+      [Line: 32] StmtK  Assign
+        [Line: 32] ExpK  a  ArrayMembV
+          [Line: 32] ExpK  i  IdV
+        [Line: 32] ExpK  j  IdV
+      [Line: 33] StmtK  Assign
+        [Line: 33] ExpK  i  IdV
+        [Line: 33] ExpK  Op  +
+          [Line: 33] ExpK  i  IdV
+          [Line: 33] ExpK  Const  1
+    [Line: 35] StmtK  Call    q
+      [Line: 35] ExpK  num  IdV
+    [Line: 36] StmtK  Assign
+      [Line: 36] ExpK  i  IdV
+      [Line: 36] ExpK  Const  1
+    [Line: 37] StmtK  While
+      [Line: 37] ExpK  Op  <
+        [Line: 37] ExpK  i  IdV
+        [Line: 37] ExpK  Op  +
+          [Line: 37] ExpK  num  IdV
+          [Line: 37] ExpK  Const  1
+      [Line: 38] StmtK  Write
+        [Line: 38] ExpK  a  ArrayMembV
+          [Line: 38] ExpK  i  IdV
+      [Line: 39] StmtK  Assign
+        [Line: 39] ExpK  i  IdV
+        [Line: 39] ExpK  Op  +
+          [Line: 39] ExpK  i  IdV
+          [Line: 39] ExpK  Const  1

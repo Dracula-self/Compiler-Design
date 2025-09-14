@@ -1,0 +1,359 @@
+词法分析结果-------------------------------------------------------------------------
+序号	行数	词法信息		语义信息	
+
+1   	1	PROGRAM        	program        
+2   	1	ID             	constOptTest   
+3   	3	VAR            	var            
+4   	3	INTEGER        	integer        
+5   	3	ID             	a              
+6   	3	COMMA          	,              
+7   	3	ID             	b              
+8   	3	COMMA          	,              
+9   	3	ID             	result         
+10  	3	COMMA          	,              
+11  	3	ID             	i              
+12  	3	SEMI           	;              
+13  	4	BEGIN          	begin          
+14  	5	ID             	a              
+15  	5	ASSIGN         	:=             
+16  	5	INTC           	5              
+17  	5	SEMI           	;              
+18  	6	ID             	b              
+19  	6	ASSIGN         	:=             
+20  	6	INTC           	10             
+21  	6	SEMI           	;              
+22  	8	ID             	result         
+23  	8	ASSIGN         	:=             
+24  	8	ID             	a              
+25  	8	PLUS           	+              
+26  	8	ID             	b              
+27  	8	SEMI           	;              
+28  	9	WRITE          	write          
+29  	9	LPAREN         	(              
+30  	9	ID             	result         
+31  	9	RPAREN         	)              
+32  	9	SEMI           	;              
+33  	11	ID             	result         
+34  	11	ASSIGN         	:=             
+35  	11	ID             	a              
+36  	11	TIMES          	*              
+37  	11	ID             	b              
+38  	11	SEMI           	;              
+39  	12	WRITE          	write          
+40  	12	LPAREN         	(              
+41  	12	ID             	result         
+42  	12	RPAREN         	)              
+43  	12	SEMI           	;              
+44  	14	ID             	result         
+45  	14	ASSIGN         	:=             
+46  	14	LPAREN         	(              
+47  	14	ID             	a              
+48  	14	PLUS           	+              
+49  	14	ID             	b              
+50  	14	RPAREN         	)              
+51  	14	TIMES          	*              
+52  	14	LPAREN         	(              
+53  	14	ID             	b              
+54  	14	MINUS          	-              
+55  	14	ID             	a              
+56  	14	RPAREN         	)              
+57  	14	SEMI           	;              
+58  	15	WRITE          	write          
+59  	15	LPAREN         	(              
+60  	15	ID             	result         
+61  	15	RPAREN         	)              
+62  	15	SEMI           	;              
+63  	17	ID             	i              
+64  	17	ASSIGN         	:=             
+65  	17	INTC           	0              
+66  	17	SEMI           	;              
+67  	18	WHILE          	while          
+68  	18	ID             	i              
+69  	18	LT             	<              
+70  	18	INTC           	3              
+71  	18	DO             	do             
+72  	19	ID             	i              
+73  	19	ASSIGN         	:=             
+74  	19	ID             	i              
+75  	19	PLUS           	+              
+76  	19	INTC           	1              
+77  	19	SEMI           	;              
+78  	20	ID             	result         
+79  	20	ASSIGN         	:=             
+80  	20	ID             	a              
+81  	20	PLUS           	+              
+82  	20	ID             	i              
+83  	20	SEMI           	;              
+84  	21	WRITE          	write          
+85  	21	LPAREN         	(              
+86  	21	ID             	result         
+87  	21	RPAREN         	)              
+88  	22	ENDWH          	endwh          
+89  	22	SEMI           	;              
+90  	24	IF             	if             
+91  	24	ID             	a              
+92  	24	LT             	<              
+93  	24	ID             	b              
+94  	25	THEN           	then           
+95  	25	ID             	result         
+96  	25	ASSIGN         	:=             
+97  	25	ID             	a              
+98  	25	TIMES          	*              
+99  	25	INTC           	2              
+100 	26	ELSE           	else           
+101 	26	ID             	result         
+102 	26	ASSIGN         	:=             
+103 	26	ID             	b              
+104 	26	TIMES          	*              
+105 	26	INTC           	2              
+106 	27	FI             	fi             
+107 	27	SEMI           	;              
+108 	29	WRITE          	write          
+109 	29	LPAREN         	(              
+110 	29	ID             	result         
+111 	29	RPAREN         	)              
+112 	30	END            	end            
+113 	30	DOT            	.              
+114 	30	ENDFILE        	               
+语法分析结果-------------------------------------------------------------------------
+ProK 0
+   PheadK 1 constOptTest
+   TypeK 3
+   VarK 3
+      DecK 3 IntegerK a b result i 
+   ProcDecK 4 
+   StmLK 4
+      StmtK 5 AssignK 
+         ExpK 5 IdK IdV a
+         ExpK 5 ConstK 5
+      StmtK 6 AssignK 
+         ExpK 6 IdK IdV b
+         ExpK 6 ConstK 10
+      StmtK 8 AssignK 
+         ExpK 8 IdK IdV result
+         ExpK 8 OpK +
+            ExpK 8 IdK IdV a
+            ExpK 8 IdK IdV b
+      StmtK 9 WriteK 
+         ExpK 9 IdK IdV result
+      StmtK 11 AssignK 
+         ExpK 11 IdK IdV result
+         ExpK 11 OpK *
+            ExpK 11 IdK IdV a
+            ExpK 11 IdK IdV b
+      StmtK 12 WriteK 
+         ExpK 12 IdK IdV result
+      StmtK 14 AssignK 
+         ExpK 14 IdK IdV result
+         ExpK 14 OpK *
+            ExpK 14 OpK +
+               ExpK 14 IdK IdV a
+               ExpK 14 IdK IdV b
+            ExpK 14 OpK -
+               ExpK 14 IdK IdV b
+               ExpK 14 IdK IdV a
+      StmtK 15 WriteK 
+         ExpK 15 IdK IdV result
+      StmtK 17 AssignK 
+         ExpK 17 IdK IdV i
+         ExpK 17 ConstK 0
+      StmtK 18 WhileK 
+         ExpK 18 OpK <
+            ExpK 18 IdK IdV i
+            ExpK 18 ConstK 3
+         StmtK 19 AssignK 
+            ExpK 19 IdK IdV i
+            ExpK 19 OpK +
+               ExpK 19 IdK IdV i
+               ExpK 19 ConstK 1
+         StmtK 20 AssignK 
+            ExpK 20 IdK IdV result
+            ExpK 20 OpK +
+               ExpK 20 IdK IdV a
+               ExpK 20 IdK IdV i
+         StmtK 21 WriteK 
+            ExpK 21 IdK IdV result
+      StmtK 24 IfK 
+         ExpK 24 OpK <
+            ExpK 24 IdK IdV a
+            ExpK 24 IdK IdV b
+         StmtK 25 AssignK 
+            ExpK 25 IdK IdV result
+            ExpK 25 OpK *
+               ExpK 25 IdK IdV a
+               ExpK 25 ConstK 2
+         StmtK 26 AssignK 
+            ExpK 26 IdK IdV result
+            ExpK 26 OpK *
+               ExpK 26 IdK IdV b
+               ExpK 26 ConstK 2
+      StmtK 29 WriteK 
+         ExpK 29 IdK IdV result
+
+语义分析结果-------------------------------------------------------------------------
+
+======= 符号表总览 =======
+
+--- 第1层符号表 ---
+[变量] a
+  ├─ 访问方式: 0
+  ├─ 层级/偏移: 1/1
+  └─ 类型: 0
+
+[变量] b
+  ├─ 访问方式: 0
+  ├─ 层级/偏移: 1/1
+  └─ 类型: 0
+
+[变量] result
+  ├─ 访问方式: 0
+  ├─ 层级/偏移: 1/1
+  └─ 类型: 0
+
+[变量] i
+  ├─ 访问方式: 0
+  ├─ 层级/偏移: 1/1
+  └─ 类型: 0
+
+
+======= 符号表结束 =======
+
+中间代码-------------------------------------------------------------------------
+0:MENTRY     NULL     12     0     
+1:ASSIG     5     a     NULL     
+2:ASSIG     10     b     NULL     
+3:ADD     a     b     temp1     
+4:ASSIG     temp1     result     NULL     
+5:WRITEC     result     NULL     NULL     
+6:MULT     a     b     temp2     
+7:ASSIG     temp2     result     NULL     
+8:WRITEC     result     NULL     NULL     
+9:ADD     a     b     temp3     
+10:SUB     b     a     temp4     
+11:MULT     temp3     temp4     temp5     
+12:ASSIG     temp5     result     NULL     
+13:WRITEC     result     NULL     NULL     
+14:ASSIG     0     i     NULL     
+15:WHILESTART     0     NULL     NULL     
+16:LTC     i     3     temp6     
+17:JUMP0     temp6     1     NULL     
+18:ADD     i     1     temp7     
+19:ASSIG     temp7     i     NULL     
+20:ADD     a     i     temp8     
+21:ASSIG     temp8     result     NULL     
+22:WRITEC     result     NULL     NULL     
+23:JUMP     0     NULL     NULL     
+24:ENDWHILE     1     NULL     NULL     
+25:LTC     a     b     temp9     
+26:JUMP0     temp9     2     NULL     
+27:MULT     a     2     temp10     
+28:ASSIG     temp10     result     NULL     
+29:JUMP     3     NULL     NULL     
+30:LABEL     2     NULL     NULL     
+31:MULT     b     2     temp11     
+32:ASSIG     temp11     result     NULL     
+33:LABEL     3     NULL     NULL     
+34:WRITEC     result     NULL     NULL     
+
+中间代码优化-常量表达式优化-------------------------------------------------------------------------
+当前的常量定值表：
+0:
+当前的常量定值表：
+0:(1,5) 
+当前的常量定值表：
+0:(1,5) (1,10) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,15) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,15) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,15) (temp2,50) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,50) (temp2,50) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,50) (temp2,50) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,50) (temp2,50) (temp3,15) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,50) (temp2,50) (temp3,15) (temp4,5) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,50) (temp2,50) (temp3,15) (temp4,5) (temp5,75) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,75) (temp2,50) (temp3,15) (temp4,5) (temp5,75) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,75) (temp2,50) (temp3,15) (temp4,5) (temp5,75) 
+当前的常量定值表：
+0:(1,5) (1,10) (temp1,15) (1,75) (temp2,50) (temp3,15) (temp4,5) (temp5,75) (1,0) 
+当前的常量定值表：
+1:
+当前的常量定值表：
+1:
+当前的常量定值表：
+1:
+当前的常量定值表：
+2:
+当前的常量定值表：
+2:
+当前的常量定值表：
+2:
+当前的常量定值表：
+2:
+当前的常量定值表：
+2:
+当前的常量定值表：
+2:
+当前的常量定值表：
+3:
+当前的常量定值表：
+3:
+当前的常量定值表：
+3:
+当前的常量定值表：
+4:
+当前的常量定值表：
+4:
+当前的常量定值表：
+4:
+当前的常量定值表：
+5:
+当前的常量定值表：
+5:
+当前的常量定值表：
+5:
+当前的常量定值表：
+6:
+当前的常量定值表：
+6:
+0:MENTRY     NULL     12     0     
+1:ASSIG     5     a     NULL     
+2:ASSIG     10     b     NULL     
+3:ASSIG     15     result     NULL     
+4:WRITEC     15     NULL     NULL     
+5:ASSIG     50     result     NULL     
+6:WRITEC     50     NULL     NULL     
+7:ASSIG     75     result     NULL     
+8:WRITEC     75     NULL     NULL     
+9:ASSIG     0     i     NULL     
+10:WHILESTART     0     NULL     NULL     
+11:LTC     i     3     temp6     
+12:JUMP0     temp6     1     NULL     
+13:ADD     i     1     temp7     
+14:ASSIG     temp7     i     NULL     
+15:ADD     a     i     temp8     
+16:ASSIG     temp8     result     NULL     
+17:WRITEC     result     NULL     NULL     
+18:JUMP     0     NULL     NULL     
+19:ENDWHILE     1     NULL     NULL     
+20:LTC     a     b     temp9     
+21:JUMP0     temp9     2     NULL     
+22:MULT     a     2     temp10     
+23:ASSIG     temp10     result     NULL     
+24:JUMP     3     NULL     NULL     
+25:LABEL     2     NULL     NULL     
+26:MULT     b     2     temp11     
+27:ASSIG     temp11     result     NULL     
+28:LABEL     3     NULL     NULL     
+29:WRITEC     result     NULL     NULL     
+1205a10b15result1550result5075result750i0i3temp6temp61i1temp7temp7iaitemp8temp8resultresult01abtemp9temp92a2temp10temp10result32b2temp11temp11result3result

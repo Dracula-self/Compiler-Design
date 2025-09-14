@@ -1,0 +1,117 @@
+ProK 0
+   PheadK 1 p
+   TypeK 2
+   VarK 2
+      DecK 2 IntegerK i j num 
+      DecK 3 ArrayK 1 20 IntegerK a 
+   ProcDecK 5 
+      ProcDecK 5 q
+         DecK 5 valparamType IntegerK num 
+         TypeK 6
+         VarK 6
+            DecK 6 IntegerK i j k 
+            DecK 7 IntegerK t 
+         ProcDecK 8 
+         StmLK 8
+            StmtK 9 AssignK 
+               ExpK 9 IdK IdV i
+               ExpK 9 ConstK 1
+            StmtK 10 AssignK 
+               ExpK 10 IdK IdV j
+               ExpK 10 ConstK 1
+            StmtK 11 WhileK 
+               ExpK 11 OpK 28
+                  ExpK 11 IdK IdV i
+                  ExpK 11 IdK IdV num
+               StmtK 12 AssignK 
+                  ExpK 12 IdK IdV j
+                  ExpK 12 OpK 30
+                     ExpK 12 OpK 31
+                        ExpK 12 IdK IdV num
+                        ExpK 12 IdK IdV i
+                     ExpK 12 ConstK 1
+               StmtK 13 AssignK 
+                  ExpK 13 IdK IdV k
+                  ExpK 13 ConstK 1
+               StmtK 14 WhileK 
+                  ExpK 14 OpK 28
+                     ExpK 14 IdK IdV k
+                     ExpK 14 IdK IdV j
+                  StmtK 15 IfK 
+                     ExpK 15 OpK 28
+                        ExpK 15 IdK ArrayMembV a
+                           ExpK 15 OpK 30
+                              ExpK 15 IdK IdV k
+                              ExpK 15 ConstK 1
+                        ExpK 15 IdK ArrayMembV a
+                           ExpK 15 IdK IdV k
+                     StmtK 16 AssignK 
+                        ExpK 16 IdK IdV t
+                        ExpK 16 IdK ArrayMembV a
+                           ExpK 16 IdK IdV k
+                     StmtK 17 AssignK 
+                        ExpK 17 IdK ArrayMembV a
+                           ExpK 17 IdK IdV k
+                        ExpK 17 IdK ArrayMembV a
+                           ExpK 17 OpK 30
+                              ExpK 17 IdK IdV k
+                              ExpK 17 ConstK 1
+                     StmtK 18 AssignK 
+                        ExpK 18 IdK ArrayMembV a
+                           ExpK 18 OpK 30
+                              ExpK 18 IdK IdV k
+                              ExpK 18 ConstK 1
+                        ExpK 18 IdK IdV t
+                     StmtK 19 AssignK 
+                        ExpK 19 IdK IdV t
+                        ExpK 19 ConstK 0
+                  StmtK 21 AssignK 
+                     ExpK 21 IdK IdV k
+                     ExpK 21 OpK 30
+                        ExpK 21 IdK IdV k
+                        ExpK 21 ConstK 1
+               StmtK 23 AssignK 
+                  ExpK 23 IdK IdV i
+                  ExpK 23 OpK 30
+                     ExpK 23 IdK IdV i
+                     ExpK 23 ConstK 1
+   StmLK 27
+      StmtK 28 ReadK num
+      StmtK 29 AssignK 
+         ExpK 29 IdK IdV i
+         ExpK 29 ConstK 1
+      StmtK 30 WhileK 
+         ExpK 30 OpK 28
+            ExpK 30 IdK IdV i
+            ExpK 30 OpK 30
+               ExpK 30 IdK IdV num
+               ExpK 30 ConstK 1
+         StmtK 31 ReadK j
+         StmtK 32 AssignK 
+            ExpK 32 IdK ArrayMembV a
+               ExpK 32 IdK IdV i
+            ExpK 32 IdK IdV j
+         StmtK 33 AssignK 
+            ExpK 33 IdK IdV i
+            ExpK 33 OpK 30
+               ExpK 33 IdK IdV i
+               ExpK 33 ConstK 1
+      StmtK 35 CallK q
+         ExpK 35 IdK IdV num
+      StmtK 36 AssignK 
+         ExpK 36 IdK IdV i
+         ExpK 36 ConstK 1
+      StmtK 37 WhileK 
+         ExpK 37 OpK 28
+            ExpK 37 IdK IdV i
+            ExpK 37 OpK 30
+               ExpK 37 IdK IdV num
+               ExpK 37 ConstK 1
+         StmtK 38 WriteK 
+            ExpK 38 IdK ArrayMembV a
+               ExpK 38 IdK IdV i
+         StmtK 39 AssignK 
+            ExpK 39 IdK IdV i
+            ExpK 39 OpK 30
+               ExpK 39 IdK IdV i
+               ExpK 39 ConstK 1

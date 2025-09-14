@@ -1,0 +1,11 @@
+program p
+type t = integer;
+var   t    v1;
+         char   v2;
+begin
+    read(v1);
+    v1 :=v1*10;
+    v1 = 'd';
+    v2:='abc';{单字符输入错误, 应为单个字母或数字}
+    write(v1);
+end.

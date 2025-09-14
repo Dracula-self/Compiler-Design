@@ -1,0 +1,57 @@
+program bubble
+type t=integer;z=array [1..20] of integer;
+var integer i,j,num;
+      array [1..20] of integer a;
+procedure q(integer num;array [1..20] of integer a);
+var integer i,j,k;
+      integer t;
+      record
+          integer i,j;
+            integer t;
+      end ab;
+begin
+    ab.p:=1;{第13行 域变量未声明}
+    read(q);{第14行 q不是变量标识符}
+    write(a.i);{第15行 数组a不能用‘.’访问字段}
+    k(num,a);{第16行 标识符k不是过程名}
+    while i<num do
+        j:=num-ab+1;{第18行 无法分析赋值语句右端表达式类型}
+        q:=num-ab+1;{第19行 赋值语句两端类型不匹配 赋值语句左端标识符不是变量}
+        k:=1;
+        while k<j do
+            if a[k+1] < a[k]
+            then
+                t:=a[k];
+                a[k]:=a[k+1];
+                a[k+1]:=t
+            else temp:=0 {第27行 标识符temp未声明}
+            fi;
+            k:=k+1
+        endwh;
+        i:=i+1
+    endwh;
+    return
+end
+
+begin
+    read(num);
+    i:=1;
+    while i<(num+1) do
+        read(j);
+        a[i]:=j;
+        i:=i+1
+    endwh;
+	while i<1 do
+        read(j);
+        a[i]:=j;
+        i:=i+1
+    endwh;
+    q(num,a);
+	q(num); {第50行 过程调用形参和实参数量不匹配}
+	q(num,i); {第51行 过程调用形参和实参类型不匹配}
+    i:=1;
+    while i<(num+1) do
+        write(a[i]);
+        i:=i+1
+    endwh
+end.

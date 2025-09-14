@@ -1,0 +1,8 @@
+program p {yoriko}
+var integer v1,v1; {标识符重复声明}
+char v2;
+begin
+read(v1);
+v1:=v1+10;
+write(v1)
+end.

@@ -1,0 +1,23 @@
+program nestedProc{正确输出：15,15,15}
+var integer x, result;
+procedure outer(integer a);
+var integer b;
+  { inner过程嵌套在outer过程内部 }
+  procedure inner(integer c);
+  var integer d;
+  begin
+    d := c + a;  { 访问外层过程的参数 }
+    write(d);    { 输出内层计算结果 }
+    result := d  { 修改全局变量 }
+  end { inner }
+begin
+  b := a * 2;
+  inner(b);     { 调用内嵌过程 }
+  write(result) { 输出全局变量的值 }
+end { outer }
+
+begin
+  x := 5;
+  outer(x);     { 调用外层过程 }
+  write(result) { 输出最终结果 }
+end.

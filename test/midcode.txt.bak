@@ -1,0 +1,30 @@
+0:MENTRY     NULL               
+1:ASSIG               NULL     
+2:ASSIG               NULL     
+3:ASSIG               NULL     
+4:WRITEC          NULL     NULL     
+5:ASSIG               NULL     
+6:WRITEC          NULL     NULL     
+7:ASSIG               NULL     
+8:WRITEC          NULL     NULL     
+9:ASSIG               NULL     
+10:WHILESTART          NULL     NULL     
+11:LTC                    
+12:JUMP0               NULL     
+13:ADD                    
+14:ASSIG               NULL     
+15:ADD                    
+16:ASSIG               NULL     
+17:WRITEC          NULL     NULL     
+18:JUMP          NULL     NULL     
+19:ENDWHILE          NULL     NULL     
+20:LTC                    
+21:JUMP0               NULL     
+22:MULT                    
+23:ASSIG               NULL     
+24:JUMP          NULL     NULL     
+25:LABEL          NULL     NULL     
+26:MULT                    
+27:ASSIG               NULL     
+28:LABEL          NULL     NULL     
+29:WRITEC          NULL     NULL     

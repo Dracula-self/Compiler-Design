@@ -1,0 +1,11 @@
+program _p  { 非法字符_ }
+type t = integer;
+var   t    v1;
+         char   v2;
+begin
+    read(v1);
+    v1 :=v1*10;
+    v2:='a';
+    write(v1);
+    a:+i; {赋值符号拼写错误, 应为 ':='}
+end.

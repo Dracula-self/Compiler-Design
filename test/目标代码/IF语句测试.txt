@@ -1,0 +1,12 @@
+{if语句测试}
+program test
+var integer a, b, max;
+begin
+ read(a);
+ read(b);
+ if a<b
+then max:=b
+else max:=a
+fi;
+ write(max)
+end.
